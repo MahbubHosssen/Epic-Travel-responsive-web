@@ -20,9 +20,6 @@ body{
 }
 
 /* Header Nav styles */
-.header{
-
-}
 .nav{
     display: flex;
     justify-content: space-between;
@@ -33,61 +30,64 @@ body{
     align-items: center;
     gap: 1rem;
 }
-.brand img{
+.nav .brand img{
     width: 48px;
     height: 56px;
 }
-.brand h1{
-    font-size: 30px;
+.nav .brand h1{
+    font-size: 40px;
     font-weight:900;
 }
-#nav-options{
+.nav #nav-options{
     display: flex;
     gap: 2rem;
 }
-#nav-options li{
+.nav #nav-options li{
     list-style: none;
 
 }
-#nav-options li a{
+.nav #nav-options li a{
     color: #424247;
     font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
 }
 
-/* Header banner styles */
+/* Header Banner styles */
 .banner{
     border-radius: 1rem;
-    background: linear-gradient(180deg, rgba(19, 19, 24, 0.8),rgba(19, 19, 24, 0) 100%);
-    background-image: url("../Images/Group\ 13\ \(1\)\ \(1\).png");
+    background-image: linear-gradient(180deg, rgba(19, 19, 24, 0.8) 0%, rgba(19, 19, 24, 0) 100%), url("../Images/Group\ 13\ \(1\)\ \(1\).png");
+    background-position: center;
+    background-size: cover;
+    /* background-image: ; */
     margin-top: 5rem;
 }
 .banner .explorer-container{
     width: 59%;
-    padding: 5rem 0;
+    padding: 6rem 0;
     margin: 0 auto;
     text-align: center;
 }
 .banner .explorer-container h1{
     color: rgb(255, 255, 255);
-    font-size: 50px;
+    font-size: 3.1rem;
     font-weight: 800;
 }
 .banner .explorer-container p{
     color: rgb(255, 255, 255);
     font-size: 14px;
-    margin: 1.1rem 0 2.1rem;
+    margin: 1.2rem 0 2.2rem;
 }
-.form{
+.explorer-container .form{
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.3);
     padding: 0.9rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    backdrop-filter: blur(1px);
 }
-input, select, button{
+.explorer-container .form input, select, button{
     border-radius: 7px;
     background: rgb(255, 255, 255);
     width: 130px;
@@ -96,21 +96,54 @@ input, select, button{
     border: none;
     padding: 0 0.5rem;
 }
-select option{
+.form select option{
     padding-right: 0.5rem;
 }
-select{
+.form select{
     color: rgba(19, 19, 24, 0.5);
     font-size: 14px;
     font-weight: 400;
 }
-button{
+.form button{
     font-weight: 700;
     cursor: pointer;
     background-color: #FF5400;
     color: rgb(255, 255, 255);
 }
-button i{
+.form button i{
     font-weight: 400;
     font-size: 15px;
+}
+.nav i{
+    display: none;
+}
+
+
+@media screen and (max-width: 576px) {
+    .nav #nav-options{
+        display: none;
+    }
+    .nav i{
+        display: block;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+    .banner{
+        background-position: center;
+        background-size: cover;
+    }
+    .banner .explorer-container{
+        width: 85%;
+    }
+    .explorer-container .form{
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    .explorer-container .form input, select, button{
+        width: 90%;
+    }
+    .explorer-container .form input{
+        width: 85%;
+    }
+
 }
