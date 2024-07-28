@@ -12,11 +12,23 @@ body{
 }
 .container{
     width: 80%;
-    margin: 3rem auto;
+    margin: 5rem auto;
 }
 /* shared styles */
 .orange{
     color: #FF5400;
+}
+.btn-primary{
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #FF5400;
+    color: rgb(255, 255, 255);
+    border-radius: 7px;
+    width: 130px;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding: 0 0.5rem;
 }
 
 /* Header Nav styles */
@@ -24,6 +36,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: -2rem;
 }
 .nav .brand{
     display: flex;
@@ -87,7 +100,7 @@ body{
     align-items: center;
     backdrop-filter: blur(1px);
 }
-.explorer-container .form input, select, button{
+.explorer-container .form input, select{
     border-radius: 7px;
     background: rgb(255, 255, 255);
     width: 130px;
@@ -104,12 +117,6 @@ body{
     font-size: 14px;
     font-weight: 400;
 }
-.form button{
-    font-weight: 700;
-    cursor: pointer;
-    background-color: #FF5400;
-    color: rgb(255, 255, 255);
-}
 .form button i{
     font-weight: 400;
     font-size: 15px;
@@ -118,8 +125,51 @@ body{
     display: none;
 }
 
+/* Popular section styles */
+.popular{
+    display: flex;
+    justify-content: space-between;
+    
+}
 
+.popular-content{
+    width: 47%;
+}
+.first-para{
+    color: rgba(19, 19, 24, 0.7);
+    margin: 1rem 0;
+    font-size: 14px;
+}
+.popular-content h1{
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #131318;
+}
+.popular-content ul{
+    margin-left: 1rem;
+}
+.popular-content ul li{
+    color: rgba(19, 19, 24, 0.7);
+    margin: 0.5rem 0;
+    font-size: 14px;
+}
+.second-para{
+    color: rgba(90, 90, 93, 1);
+    font-size: 14px;
+    margin: 1.4rem 0;
+}
+.popular-img{
+    width: 47%;
+    height: 24rem;
+}
+.popular-img img{
+    width: 100%;
+    height: 100%;
+}
 @media screen and (max-width: 576px) {
+    .container{
+        width: 85%;
+    }
     .nav #nav-options{
         display: none;
     }
@@ -135,7 +185,7 @@ body{
     .banner .explorer-container{
         width: 85%;
     }
-    .explorer-container .form{
+    .explorer-container .form,.popular{
         flex-direction: column;
         gap: 1.2rem;
     }
@@ -144,6 +194,13 @@ body{
     }
     .explorer-container .form input{
         width: 85%;
+    }
+
+    /* .popular{
+        flex-direction: column;
+    } */
+    .popular-content, .popular-img{
+        width: 100%;
     }
 
 }
