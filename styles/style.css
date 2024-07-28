@@ -166,6 +166,86 @@ body{
     width: 100%;
     height: 100%;
 }
+
+
+/* Destination section styles */
+.destination-titlebar{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.destination-titlebar h1{
+    font-size: 2rem;
+    font-weight: 800;
+    color: #131318;
+}
+.destination-titlebar p{
+    font-size: 14px;
+    color: rgba(19, 19, 24, 0.7);
+    margin-top: 1rem;
+}
+.row1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 280px;
+    gap: 22px;
+    margin-bottom: 22px;
+}
+.maldives{
+    background-image: url('../Images/Rectangle\ 5.png');
+    background-position: center;
+    background-size: cover;
+}
+.indonesia{
+    background-image: url('../Images/Rectangle\ 8.png');
+    background-position: center;
+    background-size: cover;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    font-weight: 800;
+    border-radius: 0.8rem;
+}
+.row2{
+    display: grid;
+    grid-template-columns: 30% auto 30% ;
+    grid-template-rows: 265px;
+    gap: 22px;
+}
+.srilanka{
+    background-image: url('../Images/Rectangle\ 6.png');
+    background-position: center;
+    background-size: cover;
+}
+.north{
+    background-image: url('../Images/Rectangle\ 7.png');
+    background-position: center;
+    background-size: cover;
+}
+.kashmir{
+    background-image: url('../Images/Rectangle\ 9.png');
+    background-position: center;
+}
+.row3{
+    display: grid;
+    grid-template-columns: 38% 60%;
+    grid-template-rows: 265px;
+    gap: 22px;
+    margin-top: 22px;
+}
+.bangladesh{
+    background-image: url('../Images/Rectangle\ 11.png');
+    background-position: center;
+}
+.bandorban{
+    background-image: url('../Images/Rectangle\ 10.png');
+    background-position: center;
+}
 @media screen and (max-width: 576px) {
     .container{
         width: 85%;
@@ -189,18 +269,27 @@ body{
         flex-direction: column;
         gap: 1.2rem;
     }
-    .explorer-container .form input, select, button{
+    .explorer-container .form input, select, .explorer-container .form button{
         width: 90%;
     }
     .explorer-container .form input{
         width: 85%;
     }
-
-    /* .popular{
-        flex-direction: column;
-    } */
     .popular-content, .popular-img{
         width: 100%;
+    }
+
+    .row1, .row2, .row3{
+        grid-template-columns: 1fr;
+
+    }.row1{
+        grid-template-rows: 280px 280px;
+    }
+    .row2{
+        grid-template-rows: 265px 265px 265px;
+    }
+    .row3{
+        grid-template-rows: 265px 265px;
     }
 
 }
