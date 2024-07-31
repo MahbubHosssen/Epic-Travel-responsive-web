@@ -18,6 +18,7 @@ body{
 .orange{
     color: #FF5400;
 }
+
 .btn-primary{
     font-weight: 700;
     cursor: pointer;
@@ -29,6 +30,23 @@ body{
     outline: none;
     border: none;
     padding: 0 0.5rem;
+}
+.title{
+    font-size: 2rem;
+    font-weight: 800;
+    color: #131318;
+}
+.description-1{
+    font-size: 14px;
+    color: rgba(19, 19, 24, 0.7);
+}
+.description-2{
+    font-size: 14px;
+    color: #5A5A5D;
+}
+.card-title{
+    font-size: 1.3;
+    font-weight: 800;
 }
 
 /* Header Nav styles */
@@ -172,11 +190,7 @@ body{
     text-align: center;
     margin-bottom: 2.5rem;
 }
-.destination-titlebar h1{
-    font-size: 2rem;
-    font-weight: 800;
-    color: #131318;
-}
+
 .destination-titlebar p{
     font-size: 14px;
     color: rgba(19, 19, 24, 0.7);
@@ -199,7 +213,7 @@ body{
     background-position: center;
     background-size: cover;
 }
-h3{
+.destination h3{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,6 +221,7 @@ h3{
     font-size: 1.8rem;
     font-weight: 800;
     border-radius: 0.8rem;
+    filter: brightness(90%);
 }
 .row2{
     display: grid;
@@ -246,6 +261,47 @@ h3{
     background-position: center;
     background-size: cover;
 }
+
+
+/* choose section styles */
+.choose-titlebar{
+    text-align: center;
+}
+.choose-titlebar p{
+    width: 50%;
+    margin: 1.3rem auto 2.5rem;
+
+}
+.choose-container .services{
+    display: flex;
+    justify-content: space-between;
+    gap: 22px;
+    box-sizing: border-box;
+}
+.hotel-service, .world-service, .price{
+    border-radius: 10px;
+    padding: 28px;
+}
+.hotel-service .card-title, .world-service .card-title, .price .card-title{
+    margin: 1rem 0;
+}
+.services .hotel-service{
+    background-color: rgba(251, 181, 99, 0.2);
+    border: 1px solid rgba(251, 181, 99, 0.2);
+}
+.services .world-service{
+    background-color: rgba(41, 206, 246, 0.2);
+    border: 1px solid rgba(41, 206, 246, 0.2);
+}
+.price{
+    background-color: rgba(233, 68, 68, 0.2);
+    border: 1px solid rgba(233, 68, 68, 0.2);
+    width: 44%;
+    margin: 22px auto 0;
+}
+
+
+
 @media screen and (max-width: 576px) {
     .container{
         width: 85%;
@@ -265,7 +321,7 @@ h3{
     .banner .explorer-container{
         width: 85%;
     }
-    .explorer-container .form,.popular{
+    .explorer-container .form,.popular, .choose-container .services{
         flex-direction: column;
         gap: 1.2rem;
     }
@@ -294,4 +350,11 @@ h3{
         grid-template-rows: 265px 265px;
     }
 
+    
+    .choose-titlebar p{
+        width: 100%;
+    }
+    .price{
+        width: fit-content;
+    }
 }
